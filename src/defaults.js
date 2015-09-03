@@ -39,6 +39,8 @@ Selectize.defaults = {
 	searchField: ['text'],
 	searchConjunction: 'and',
 
+	texts : {"add": "Add"},
+
 	mode: null,
 	wrapperClass: 'selectize-control',
 	inputClass: 'selectize-input',
