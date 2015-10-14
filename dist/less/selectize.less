@@ -1,7 +1,4 @@
-@import "plugins/drag_drop";
-@import "plugins/dropdown_header";
-@import "plugins/optgroup_columns";
-@import "plugins/remove_button";
+
 
 // base styles
 
@@ -108,6 +105,9 @@
 	background: @selectize-color-input;
 	cursor: text;
 	display: inline-block;
+}
+.selectize-input, .selectize-control.single .selectize-input.input-readonly.input-active {
+	cursor: default;
 }
 
 .selectize-input {
