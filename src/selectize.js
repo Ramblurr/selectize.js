@@ -174,6 +174,7 @@ $.extend(Selectize.prototype, {
 		$dropdown.on('mouseenter', '[data-selectable]', function() { return self.onOptionHover.apply(self, arguments); });
 		$dropdown.on('mousedown click', '[data-selectable]', function() { return self.onOptionSelect.apply(self, arguments); });
 		watchChildEvent($control, 'mousedown', '*:not(input)', function() { return self.onItemSelect.apply(self, arguments); });
+        watchChildEvent($control, 'click', '*:not(input)', function() { return function(e){ e.stopPropagation(); return false;}.apply(self, arguments);});
 		autoGrow($control_input);
 
 		$control.on({
@@ -833,10 +834,10 @@ $.extend(Selectize.prototype, {
 		}
 
 		// ensure control has focus
-		self.hideInput();
+		/*self.hideInput();
 		if (!this.isFocused) {
 			self.focus();
-		}
+		}*/
 	},
 
 	/**
